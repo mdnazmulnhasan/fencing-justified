@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
+.why-us-section {
+  margin: 4rem 0;
+}
 
-.radial-light {
-  filter: blur(200px);
-  background: rgba(27, 127, 225, 0.4);
-  position: absolute;
-  width: 497px;
-  height: 497px;
-  left: 712px;
-  top: 2137px;
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 350px 350px 350px; /* Fixed width for each card */
+  gap: 4rem; /* Space between cards */
+  justify-content: center; /* Center the grid in the container */
 }
