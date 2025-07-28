@@ -4,9 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
 
+
 export default function Navbar() {
   return (
-    <nav className="w-full border-b shadow-sm">
+    <nav className="w-full border-b shadow-sm bg-[#F2F4F6]" >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Left Links */}
         <ul className="flex items-center space-x-8 text-gray-700 font-medium">
