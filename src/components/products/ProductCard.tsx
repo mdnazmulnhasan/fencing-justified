@@ -11,7 +11,7 @@ type Product = {
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="bg-gray-100 rounded-xl p-4 shadow flex flex-col items-center">
+    <div className="bg-gray-100 rounded-xl p-4 shadow">
       <Image
         src={product.image}
         alt={product.name}
@@ -19,7 +19,7 @@ export default function ProductCard({ product }: { product: Product }) {
         height={150}
         className="rounded-md object-cover"
       />
-      <h3 className="mt-3 font-semibold text-gray-800 text-center">
+      <h3 className="mt-3 font-semibold text-gray-800">
         {product.name}
       </h3>
       <p className="text-gray-600 text-sm">{product.priceRange}</p>
