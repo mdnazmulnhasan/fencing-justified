@@ -9,7 +9,7 @@ const products = [
     id: 1,
     name: 'GI Poultry Mesh',
     priceRange: '₹1,260.00 – ₹10,750.00',
-    image: '/image.png', // Put actual images inside public/
+    image: '/image.png',
   },
   {
     id: 2,
@@ -55,21 +55,21 @@ export default function ProductSlider() {
   ];
 
   return (
-    <div className="relative w-full max-w-7xl mx-auto flex items-center">
-      {/* Previous Button */}
+    <div className="relative w-full max-w-7xl mx-auto flex items-center px-4">
+      {/* Prev btn */}
       <button
         onClick={handlePrev}
-        className="absolute left-[-20px] bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
+        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
       >
         <FaArrowLeft />
       </button>
 
       {/* Slider Container */}
-      <div className="flex gap-6 overflow-hidden">
+      <div className="grid grid-cols-4 gap-6 w-full overflow-hidden">
         {visibleProducts.map((product) => (
           <div
             key={product.id}
-            className="bg-gray-100 rounded-xl p-4 w-64 flex-shrink-0 shadow"
+            className="bg-gray-100 rounded-xl p-4 shadow flex flex-col items-center"
           >
             <Image
               src={product.image}
@@ -78,7 +78,9 @@ export default function ProductSlider() {
               height={150}
               className="rounded-md object-cover"
             />
-            <h3 className="mt-3 font-semibold text-gray-800">{product.name}</h3>
+            <h3 className="mt-3 font-semibold text-gray-800 text-center">
+              {product.name}
+            </h3>
             <p className="text-gray-600 text-sm">{product.priceRange}</p>
             <button className="mt-3 bg-lime-400 text-black font-medium px-4 py-2 rounded hover:bg-lime-500 transition">
               Shop Now
@@ -90,7 +92,7 @@ export default function ProductSlider() {
       {/* Next Button */}
       <button
         onClick={handleNext}
-        className="absolute right-[-20px] bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
+        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
       >
         <FaArrowRight />
       </button>
