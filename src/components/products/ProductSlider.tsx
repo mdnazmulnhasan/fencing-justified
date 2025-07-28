@@ -15,25 +15,25 @@ const products = [
     id: 2,
     name: 'JF Bluelink Mesh',
     priceRange: '₹3,067.50 – ₹6,362.50',
-    image: '/mesh2.png',
+    image: '/WhatsApp Image 2025-07-28 at 13.07.41_dfbfd9e8.jpg',
   },
   {
     id: 3,
     name: 'Steel Wire Mesh',
     priceRange: '₹2,000.00 – ₹8,500.00',
-    image: '/mesh3.png',
+    image: '/image3.jpg',
   },
   {
     id: 4,
     name: 'Hexa Wire Mesh',
     priceRange: '₹1,500.00 – ₹7,500.00',
-    image: '/mesh4.png',
+    image: '/mesh4.jpg',
   },
   {
     id: 5,
     name: 'Chain Link Mesh',
     priceRange: '₹2,500.00 – ₹9,000.00',
-    image: '/mesh5.png',
+    image: '/mesh4.jpg',
   },
 ];
 
