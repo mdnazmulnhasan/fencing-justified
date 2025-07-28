@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
         alt={product.name}
         width={250}
         height={150}
-        className="rounded-md object-cover"
+        className="rounded-md object-cover w-full"
       />
       <h3 className="mt-3 font-semibold text-gray-800">
         {product.name}
