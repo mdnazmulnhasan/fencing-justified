@@ -1,8 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import ProductCard from './ProductCard';
 
 const products = [
   {
@@ -56,7 +56,7 @@ export default function ProductSlider() {
 
   return (
     <div className="relative w-full max-w-7xl mx-auto flex items-center px-4">
-      {/* Prev btn */}
+      {/* Prev Button */}
       <button
         onClick={handlePrev}
         className="absolute left-0 top-1/2 -translate-y-1/2 bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
@@ -64,28 +64,10 @@ export default function ProductSlider() {
         <FaArrowLeft />
       </button>
 
-      {/* Slider Container */}
+      {/* Product List */}
       <div className="grid grid-cols-4 gap-6 w-full overflow-hidden">
         {visibleProducts.map((product) => (
-          <div
-            key={product.id}
-            className="bg-gray-100 rounded-xl p-4 shadow flex flex-col items-center"
-          >
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={250}
-              height={150}
-              className="rounded-md object-cover"
-            />
-            <h3 className="mt-3 font-semibold text-gray-800 text-center">
-              {product.name}
-            </h3>
-            <p className="text-gray-600 text-sm">{product.priceRange}</p>
-            <button className="mt-3 bg-lime-400 text-black font-medium px-4 py-2 rounded hover:bg-lime-500 transition">
-              Shop Now
-            </button>
-          </div>
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
