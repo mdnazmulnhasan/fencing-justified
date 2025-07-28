@@ -2,7 +2,7 @@ import { FaStar, FaSmile, FaTruck } from 'react-icons/fa';
 
 export default function TrustedSection() {
   return (
-    <section className="relative w-full max-w-6xl mx-auto mt-10 rounded-xl overflow-hidden">
+    <section className="relative w-full max-w-7xl mx-auto mt-10 rounded-xl overflow-hidden">
       {/* Background with radial light effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#03357A] to-[#00254D]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.15)_0%,_transparent_60%)]"></div>
@@ -16,7 +16,7 @@ export default function TrustedSection() {
         </h2>
 
         {/* Features */}
-        <div className="flex justify-center items-center gap-16 flex-wrap">
+        <div className="grid grid-cols-3 gap-16 ">
           {/* Premium Products */}
           <div className="flex flex-col items-center text-center">
             <FaStar className="text-3xl mb-2" />

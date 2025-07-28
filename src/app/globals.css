@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+
+.radial-light {
+  filter: blur(200px);
+  background: rgba(27, 127, 225, 0.4);
+  position: absolute;
+  width: 497px;
+  height: 497px;
+  left: 712px;
+  top: 2137px;
+}
