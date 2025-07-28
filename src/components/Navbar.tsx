@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
 
 export default function Navbar() {
@@ -9,12 +10,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Left Links */}
         <ul className="flex items-center space-x-8 text-gray-700 font-medium">
-          <li><a href="/">Home</a></li> 
-          <li><a href="/shop">Shop</a></li>
+          <li><Link href="/">Home</Link></li> 
+          <li><Link href="/shop">Shop</Link></li>
 
           
-          <li><a href="/blogs">Blogs</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><Link href="/blogs">Blogs</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
         </ul>
 
         {/* Logo */}
@@ -30,10 +31,10 @@ export default function Navbar() {
 
         {/* Right Section */}
         <div className="flex items-center space-x-6 text-gray-700">
-          <a href="/login" className="flex items-center space-x-1">
+          <Link href="/login" className="flex items-center space-x-1">
             <span>Login</span>
             <FaUser className="text-lg" />
-          </a>
+          </Link>
           <FaSearch className="text-lg cursor-pointer" />
           <div className="relative">
             <FaShoppingCart className="text-lg cursor-pointer" />
