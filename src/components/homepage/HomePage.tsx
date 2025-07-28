@@ -2,7 +2,7 @@ import React from 'react';
 import ProductSlider from '../products/ProductSlider';
 import SectionTitle from '../section-title/SectionTitle';
 import TrustedSection from '../TrustedSection/TrustedSection';
-import Card from '../why-us/Card';
+import WhyUs from '../why-us/WhyUs';
 
 const HomePage = () => {
     return (
@@ -10,7 +10,7 @@ const HomePage = () => {
             <SectionTitle align='left' title='Agricultural Products' />
             <ProductSlider />
             <TrustedSection/>
-            <Card/>
+            <WhyUs/>
         </section>
     );
 };

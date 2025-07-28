@@ -30,28 +30,40 @@
 
 
 
-
-
 import React from "react";
 
-const CustomerCard = () => {
+const Card = ({ title, description, img, bgColor, highlightColor, isMiddle }) => {
   return (
-    <div className="relative w-[300px] p-6 rounded-[20px] bg-[#00264D] text-white overflow-hidden shadow-md">
-      {/* Top-right gradient glow */}
-      <div className="absolute top-0 right-0 w-[150px] h-[150px] bg-[#1B7FE1] rounded-bl-[150px] opacity-70 blur-3xl pointer-events-none"></div>
+    <div
+      className={`relative p-6 rounded-[20px] shadow-sm overflow-hidden h-[501px] ${
+        bgColor ? bgColor : "bg-white"
+      } ${isMiddle ? "-mt-8" : ""} ${bgColor ? "text-white" : "text-gray-900"}`}
+    >
+      {/* Highlight Glow */}
+      <div
+        className={`absolute top-0 right-0 w-[180px] h-[180px] rounded-bl-[180px] blur-2xl pointer-events-none`}
+        style={{
+          background: highlightColor,
+          opacity: bgColor ? 0.7 : 1,
+        }}
+      ></div>
 
       {/* Icon */}
-      <img src={'/mesh5.jpg'} alt="customer icon" className="w-10 h-10 mb-4 z-10 relative" />
+      <img src={img} alt="icon" className="w-10 h-10 mb-4 relative z-10" />
 
       {/* Heading */}
-      <h2 className="text-lg font-bold mb-2 z-10 relative">Customer-Centric Approach</h2>
+      <h2 className="text-lg font-bold mb-2 leading-snug relative z-10">{title}</h2>
 
       {/* Paragraph */}
-      <p className="text-sm text-[#cbd5e1] leading-relaxed z-10 relative">
-        At JF Products, customer satisfaction is paramount. We pride ourselves on delivering timely services, maintaining transparent communication, and ensuring a seamless purchasing experience. Our commitment to excellence is reflected in the positive feedback from our valued clients.
+      <p
+        className={`text-sm leading-relaxed relative z-10 ${
+          bgColor ? "text-[#cbd5e1]" : "text-gray-700"
+        }`}
+      >
+        {description}
       </p>
     </div>
   );
 };
 
-export default CustomerCard;
+export default Card;
