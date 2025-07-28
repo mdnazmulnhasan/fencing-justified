@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 const products = [
   {
@@ -23,21 +23,49 @@ const products = [
     priceRange: '₹2,000.00 – ₹8,500.00',
     image: '/mesh3.png',
   },
+  {
+    id: 4,
+    name: 'Hexa Wire Mesh',
+    priceRange: '₹1,500.00 – ₹7,500.00',
+    image: '/mesh4.png',
+  },
+  {
+    id: 5,
+    name: 'Chain Link Mesh',
+    priceRange: '₹2,500.00 – ₹9,000.00',
+    image: '/mesh5.png',
+  },
 ];
 
 export default function ProductSlider() {
   const [startIndex, setStartIndex] = useState(0);
+  const itemsToShow = 4;
 
   const handleNext = () => {
     setStartIndex((prev) => (prev + 1) % products.length);
   };
 
-  const visibleProducts = products.slice(startIndex, startIndex + 2);
+  const handlePrev = () => {
+    setStartIndex((prev) => (prev - 1 + products.length) % products.length);
+  };
+
+  const visibleProducts = [
+    ...products.slice(startIndex, startIndex + itemsToShow),
+    ...products.slice(0, Math.max(0, startIndex + itemsToShow - products.length)),
+  ];
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto flex items-center">
+    <div className="relative w-full max-w-7xl mx-auto flex items-center">
+      {/* Previous Button */}
+      <button
+        onClick={handlePrev}
+        className="absolute left-[-20px] bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
+      >
+        <FaArrowLeft />
+      </button>
+
       {/* Slider Container */}
-      <div className="flex gap-6">
+      <div className="flex gap-6 overflow-hidden">
         {visibleProducts.map((product) => (
           <div
             key={product.id}
@@ -62,7 +90,7 @@ export default function ProductSlider() {
       {/* Next Button */}
       <button
         onClick={handleNext}
-        className="absolute right-[-20px] bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition"
+        className="absolute right-[-20px] bg-white border rounded-full p-3 shadow hover:bg-gray-100 transition z-10"
       >
         <FaArrowRight />
       </button>
