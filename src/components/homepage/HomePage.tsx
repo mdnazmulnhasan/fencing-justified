@@ -1,11 +1,13 @@
 import React from 'react';
 import ProductSlider from '../products/ProductSlider';
+import SectionTitle from '../section-title/SectionTitle';
 
 const HomePage = () => {
     return (
-        <div>
+        <section className='max-w-7xl mx-auto'>
+            <SectionTitle align='left' title='Agricultural Products' />
             <ProductSlider />
-        </div>
+        </section>
     );
 };
 
