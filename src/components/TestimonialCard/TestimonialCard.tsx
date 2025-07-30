@@ -5,7 +5,7 @@ import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function TestimonialCard() {
   return (
-    <section className='grid grid-cols-1 md:grid-cols-[60%_40%] gap-7'> 
+    <section className='grid grid-cols-1 md:grid-cols-[.6fr_.4fr] gap-7'> 
     <div className=" bg-[#f7f7f7] rounded-xl p-6 shadow relative h- flex flex-col justify-between">
       {/* Quote icon background */}
       <div className=" flex items-center justify-start rounded">
