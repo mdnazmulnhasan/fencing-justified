@@ -1,8 +1,11 @@
+import CitySelector from "../CitySelector/CitySelector";
 
 export default function ContactForm() {
   return (
-    <section className="grid grid-cols-[448px_1fr] gap-6 p-6 bg-white">
-      {/* Contact Form */}
+    <section className=" bg-white">
+        <CitySelector/>
+        <div className="grid grid-cols-[448px_1fr] gap-6 p-6">
+             {/* Contact Form */}
       <div className=" bg-[#002b5c] text-white rounded-2xl p-6 w-full">
         <h2 className="text-2xl font-semibold mb-6">Contact Us</h2>
 
@@ -51,7 +54,9 @@ export default function ContactForm() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+      </div>     
+        </div>
+
     </section>
   );
 }
