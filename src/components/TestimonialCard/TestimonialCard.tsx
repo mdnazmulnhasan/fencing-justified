@@ -1,10 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function TestimonialCard() {
   return (
-    <div className="w-[420px] bg-[#f7f7f7] rounded-xl p-6 shadow relative h-[300px] flex flex-col justify-between">
+    <section className='grid grid-cols-[60%_40%] gap-7'> 
+    <div className=" bg-[#f7f7f7] rounded-xl p-6 shadow relative h- flex flex-col justify-between">
       {/* Quote icon background */}
       <div className="bg-[#d8f0b2] w-10 h-10 flex items-center justify-center rounded">
         <FaQuoteLeft className="text-[#7AC943] text-xl" />
@@ -39,5 +41,10 @@ export default function TestimonialCard() {
         </div>
       </div>
     </div>
+
+    <div>
+      <Image src={'/profile.svg'} alt='profile' height={300} width={200} className='w-[100%] h-full'/>
+    </div>
+    </section>
   );
 }

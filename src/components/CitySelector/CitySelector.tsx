@@ -2,10 +2,10 @@ export default function CitySelector() {
   const cities = [
     { name: 'COIMBATORE', image: '/hm.svg', active: true },
     { name: 'CHENNAI', image: '/chennai.svg', active: false },
-    { name: 'HYDERABAD', image: '/icons/hyderabad.svg', active: false },
-    { name: 'GOA', image: '/icons/goa.svg', active: false },
-    { name: 'KOCHI', image: '/icons/kochi.svg', active: false },
-    { name: 'MUMBAI', image: '/icons/mumbai.svg', active: false },
+    { name: 'HYDERABAD', image: '/hyderabad.svg', active: false },
+    { name: 'GOA', image: '/goa.svg', active: false },
+    { name: 'KOCHI', image: '/kochi.svg', active: false },
+    { name: 'MUMBAI', image: '/mumbai.svg', active: false },
   ];
 
   return (
