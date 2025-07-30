@@ -1,28 +1,32 @@
+
+
+
 'use client';
 
 import { useState } from 'react';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-import ProductCard from './ProductCard';
+import ProductCard from '../products/ProductCard';
+
 
 
 const products = [
     {
         id: 1,
-        name: 'GI Poultry Mesh',
+        name: 'Antiqo Fence',
         priceRange: '₹1,260.00 – ₹10,750.00',
-        image: '/image.png',
+        image: '/antiq.svg',
     },
     {
         id: 2,
-        name: 'JF Bluelink Mesh',
+        name: 'JF Australian Trellis',
         priceRange: '₹3,067.50 – ₹6,362.50',
-        image: '/WhatsApp Image 2025-07-28 at 13.07.41_dfbfd9e8.jpg',
+        image: '/trellis.svg',
     },
     {
         id: 3,
         name: 'Steel Wire Mesh',
         priceRange: '₹2,000.00 – ₹8,500.00',
-        image: '/image3.jpg',
+        image: '/polyhex.svg',
     },
     {
         id: 4,
@@ -34,11 +38,11 @@ const products = [
         id: 5,
         name: 'Chain Link Mesh',
         priceRange: '₹2,500.00 – ₹9,000.00',
-        image: '/mesh4.jpg',
+        image: '/grosswall.svg',
     },
 ];
 
-export default function ProductSlider() {
+export default function LandscapeProduct() {
     const [startIndex, setStartIndex] = useState(0);
     const itemsToShow = 4;
 
@@ -71,7 +75,7 @@ export default function ProductSlider() {
             </button>
 
             {/* Product List */}
-            <div className="grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full overflow-hidden">
                 {visibleProducts.map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))}
@@ -87,16 +91,3 @@ export default function ProductSlider() {
         </div>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

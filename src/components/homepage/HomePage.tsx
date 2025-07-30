@@ -5,16 +5,25 @@ import TrustedSection from '../TrustedSection/TrustedSection';
 import WhyUs from '../why-us/WhyUs';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
 import ContactForm from '../ContactForm/ContactForm';
+import CustomerLoveSection from '../CustomerLoveSection/CustomerLoveSection';
+import Hero from '../Hero/Hero';
+import LandscapeProduct from '../LandscapeProduct/LandscapeProduct';
 
 const HomePage = () => {
     return (
-        <section className='max-w-7xl mx-auto'>
+        <section className='max-w-7xl mx-auto p-4'>
+            <Hero />
             <SectionTitle align='left' title='Agricultural Products' />
             <ProductSlider />
-            <TrustedSection/>
-            <WhyUs/>
-            <TestimonialCard/>
-            <ContactForm/>
+            <div className='my-16'>
+                <SectionTitle align='left' title='Landscape Products' />
+                <LandscapeProduct />
+            </div>
+            <TrustedSection />
+            <WhyUs />
+            <CustomerLoveSection />
+            <TestimonialCard />
+            <ContactForm />
         </section>
     );
 };

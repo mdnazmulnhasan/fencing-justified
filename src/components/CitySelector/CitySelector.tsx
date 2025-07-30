@@ -9,7 +9,7 @@ export default function CitySelector() {
   ];
 
   return (
-    <div className="flex justify-center items-center gap-6 py-4 bg-white">
+    <div className="flex justify-center flex-wrap md:flex-nowrap items-center gap-6 py-4 bg-white">
       {cities.map((city) => (
         <div
           key={city.name}

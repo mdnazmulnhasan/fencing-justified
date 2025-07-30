@@ -1,7 +1,7 @@
 // components/Footer.jsx
 export default function Footer() {
   return (
-    <div className="bg-[#032c5c] text-white rounded-2xl p-10 md:flex justify-between items-start flex-wrap gap-10">
+    <div className="bg-[#032c5c] text-white rounded-2xl p-4 md:p-10 md:flex justify-between items-start flex-wrap gap-10">
       {/* Left Section */}
       <div className="flex-1 min-w-[280px]">
         <h2 className="text-lg font-semibold mb-2">Join Our JF Products</h2>

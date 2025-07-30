@@ -5,15 +5,15 @@ import { FaQuoteLeft, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function TestimonialCard() {
   return (
-    <section className='grid grid-cols-[60%_40%] gap-7'> 
+    <section className='grid grid-cols-1 md:grid-cols-[60%_40%] gap-7'> 
     <div className=" bg-[#f7f7f7] rounded-xl p-6 shadow relative h- flex flex-col justify-between">
       {/* Quote icon background */}
-      <div className="bg-[#d8f0b2] w-10 h-10 flex items-center justify-center rounded">
-        <FaQuoteLeft className="text-[#7AC943] text-xl" />
+      <div className=" flex items-center justify-start rounded">
+        <FaQuoteLeft className="text-[#7AC943] text-[30px]" />
       </div>
 
       {/* Testimonial text */}
-      <p className="text-[#2d2d2d] text-[16px] mt-4 leading-[1.7]">
+      <p className="text-[#2d2d2d] text-[26px]  leading-[1.7]">
         I had initial issue with stock availability and delivery. Once the product arrived on site the work has
         completed very fast(400ft.) Value for money and easy to install. Happy with the product
       </p>
