@@ -4,6 +4,7 @@ import SectionTitle from '../section-title/SectionTitle';
 import TrustedSection from '../TrustedSection/TrustedSection';
 import WhyUs from '../why-us/WhyUs';
 import TestimonialCard from '../TestimonialCard/TestimonialCard';
+import ContactForm from '../ContactForm/ContactForm';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <TrustedSection/>
             <WhyUs/>
             <TestimonialCard/>
+            <ContactForm/>
         </section>
     );
 };
