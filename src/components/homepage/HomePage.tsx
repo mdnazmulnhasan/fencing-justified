@@ -3,6 +3,7 @@ import ProductSlider from '../products/ProductSlider';
 import SectionTitle from '../section-title/SectionTitle';
 import TrustedSection from '../TrustedSection/TrustedSection';
 import WhyUs from '../why-us/WhyUs';
+import TestimonialCard from '../TestimonialCard/TestimonialCard';
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <ProductSlider />
             <TrustedSection/>
             <WhyUs/>
+            <TestimonialCard/>
         </section>
     );
 };

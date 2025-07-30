@@ -55,6 +55,8 @@ export default function ProductSlider() {
         ...products.slice(0, Math.max(0, startIndex + itemsToShow - products.length)),
     ];
 
+    console.log(visibleProducts,'visible');
+    
     return (
         <div className="relative w-full max-w-7xl mx-auto flex items-center px-4">
 
