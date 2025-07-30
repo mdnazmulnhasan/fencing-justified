@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
 
         {/* Email Input */}
-        <div className="bg-[#0e3b66] p-2 rounded-lg mb-3">
+        <div className="bg-[#0e3b66] p-2 rounded-full mb-3">
           <input
             type="email"
             placeholder="Enter your email"
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         {/* Join Now Button */}
-        <button className="bg-white text-black font-semibold py-2 px-6 rounded-full">
+        <button className="bg-white text-black font-semibold py-2 px-6 rounded-full w-full">
           Join Now
         </button>
       </div>
